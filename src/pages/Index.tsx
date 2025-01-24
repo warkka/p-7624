@@ -1,13 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { BalanceCard } from '@/components/dashboard/BalanceCard';
+import { ActionButtons } from '@/components/dashboard/ActionButtons';
+import { BillsSection } from '@/components/dashboard/BillsSection';
+import { TransactionHistory } from '@/components/dashboard/TransactionHistory';
+import { BottomMenu } from '@/components/dashboard/BottomMenu';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="bg-[rgba(245,245,247,1)] flex max-w-[480px] w-full flex-col overflow-hidden items-center mx-auto pt-[63px] pb-[30px]">
+      <BalanceCard balance="$37,100.00" percentage="+12.02%" />
+      <ActionButtons />
+      <BillsSection />
+      <TransactionHistory />
+      <BottomMenu />
+    </main>
   );
 };
 
